@@ -105,6 +105,11 @@ app.get('/events/:id', async (req, res) => {
     res.send(result);
 });
 
+app.get('/joinedEvents', async (req, res) => {
+    const result = await joinedEvents.find({ }).toArray()
+    res.send(result)
+})
+
 app.get('/joinedEvents/:email', async (req, res) => {
 
     const { email } = req.params
