@@ -95,7 +95,7 @@ app.get ('/featured-events', async (req, res)=>{
 })
 
 // Get one user by ID 
-app.get('/events/:id', verfyToken, async (req, res) => {
+app.get('/events/:id', async (req, res) => {
     // const {id}=req.params
     // console.log('params', req.params);
     const id = req.params.id;
