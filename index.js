@@ -41,7 +41,7 @@ const events = db.collection("events");
 const joinedEvents = db.collection("joinedEvents")
 const allEvents = db.collection("allevents")
 
-const verfyToken = async(req, res, next) => {
+const verifyToken = async(req, res, next) => {
     const authHeader = req.headers.authorization;
     console.log(authHeader);
 
@@ -126,7 +126,7 @@ app.get('/events/organizer/:email', async (req, res) => {
 // });
 
 
-app.post("/events", verfyToken, async (req, res) => {
+app.post("/events", verifyToken, async (req, res) => {
     try {
         const newEvent = req.body;
 
